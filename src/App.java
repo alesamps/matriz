@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
 
 
 public class App {
@@ -27,15 +28,16 @@ public class App {
 
             switch (opcao) {
                 case 1 -> System.out.println(exercicioPG(2,3,5));
-                case 2 -> System.out.println(exercicioDecrescente(1,10));
+                case 2 -> System.out.println(Arrays.toString(exercicioDecrescente(1,10)));
                 case 3 -> System.out.println(exercicioDinamico(5));
                 case 4 -> System.out.println(exercicioSoma(valores));
-                case 5 -> System.out.println(exercicioMatrizIncremental(3,5));
-                case 6 -> System.out.println(exercicioSomaMatrizes(a,b));
+                case 5 -> System.out.println(Arrays.deepToString(exercicioMatrizIncremental(3,5)));
+                case 6 -> System.out.println(Arrays.deepToString(exercicioSomaMatrizes(a,b)));
                 case 0 -> System.out.println("Encerrando o sistema...");
                 default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
+        scanner.close();
     }
 
     public static double[] exercicioPG(double a1, double razao, int n) {
@@ -59,7 +61,6 @@ public class App {
 
         return vetor;
     }
-
 
     public static int[][] exercicioSomaMatrizes(int[][] m1, int[][] m2) {
         int linhas = m1.length;
@@ -108,7 +109,6 @@ public class App {
 
         return lista;
     }
-
 
     private static void exibirMenu() {
         System.out.println("\n--- MENU DE EXERCÍCIOS ---");
