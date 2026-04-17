@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Arrays;
 
-
 public class App {
     private static Scanner scanner = new Scanner(System.in);
 
